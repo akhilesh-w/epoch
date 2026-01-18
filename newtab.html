@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Tab - Epoch Goals</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="background" id="background"></div>
+
+  <main class="container">
+    <header class="header">
+      <div class="year-nav">
+        <span class="year" id="currentYear">2026</span>
+        <button class="nav-btn" id="prevWeek">‹</button>
+        <button class="nav-btn" id="nextWeek">›</button>
+      </div>
+      <nav class="view-tabs">
+        <button class="tab" data-view="today">Today</button>
+        <button class="tab" data-view="overview">Overview</button>
+        <button class="tab active" data-view="day">Day</button>
+        <button class="tab" data-view="week">Week</button>
+        <button class="tab" data-view="month">Month</button>
+        <button class="tab" data-view="quarter">Quarter</button>
+        <button class="tab" data-view="year">Year</button>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="settingsBtn" title="Settings">⚙</button>
+      </div>
+    </header>
+
+    <div class="columns" id="columns">
+      <!-- Date columns will be dynamically generated -->
+    </div>
+
+    <footer class="shortcuts-bar">
+      <span class="shortcut">[n] new</span>
+      <span class="shortcut">[t] today</span>
+      <span class="shortcut">[d] day</span>
+      <span class="shortcut">[w] week</span>
+      <span class="shortcut">[m] month</span>
+      <span class="shortcut">[q] quarter</span>
+      <span class="shortcut">[y] year</span>
+      <span class="shortcut">[o] overview</span>
+    </footer>
+  </main>
+
+  <!-- Settings Modal -->
+  <div class="modal" id="settingsModal">
+    <div class="modal-content settings-modal">
+      <div class="modal-header">
+        <h3>Settings</h3>
+        <button class="modal-close" id="closeSettings">×</button>
+      </div>
+      <div class="settings-section">
+        <div class="settings-label">Custom Background</div>
+        <div class="settings-row">
+          <input type="file" id="bgUpload" accept="image/*" hidden>
+          <button class="btn-secondary" id="uploadBgBtn">Upload Image</button>
+          <button class="btn-secondary" id="resetBgBtn">Reset Default</button>
+        </div>
+      </div>
+      <div class="settings-section">
+        <div class="settings-label">Data</div>
+        <div class="settings-row">
+          <button class="btn-secondary" id="exportBtn">Export Goals</button>
+          <button class="btn-secondary" id="importBtn">Import Goals</button>
+          <input type="file" id="importFile" accept=".json" hidden>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
