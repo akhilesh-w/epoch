@@ -2,7 +2,16 @@
 
 A minimalist Chrome extension that replaces your new tab page with a goal tracking dashboard. Stay focused on what matters across different time horizons.
 
-![Epoch Goals Screenshot](https://raw.githubusercontent.com/akhilesh-w/epoch-goals/main/icons/icon128.png)
+## Screenshots
+
+### Day View
+![Day View](screenshots/day-view.png)
+
+### Week View
+![Week View](screenshots/week-view.png)
+
+### Quarter View
+![Quarter View](screenshots/quarter-view.png)
 
 ## Features
 
